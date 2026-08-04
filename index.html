@@ -493,10 +493,15 @@ footer p{font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.3px}
 
   /* NUCLEAR */
   .sec-nuclear{padding:56px 24px}
-  .nuc-top{grid-template-columns:1fr;gap:32px}
-  .nuc-stats{gap:28px}
+  .nuc-top{display:block}
+  .nuc-left-col{margin-bottom:36px}
+  .nuc-right-col{display:block;width:100%}
+  .nuc-stats{gap:28px;flex-wrap:wrap}
   .nuc-stat-n{font-size:32px}
-  .nuc-hitos-vert .nuc-hito{padding:14px 0 14px 12px}
+  .nuc-hitos-vert{width:100%}
+  .nuc-hitos-vert .nuc-hito{padding:14px 0;flex-direction:row;gap:12px}
+  .nuc-hito-year{min-width:40px;font-size:16px}
+  .nuc-hito-text{font-size:12px;overflow:visible;white-space:normal}
 
   /* CERTIFICACIONES */
   .cert-layout{grid-template-columns:1fr;gap:32px}
@@ -555,12 +560,15 @@ footer p{font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.3px}
 
   /* NUCLEAR */
   .sec-nuclear{padding:48px 16px}
+  .nuc-top{display:block}
+  .nuc-left-col{margin-bottom:28px}
+  .nuc-right-col{width:100%}
   .nuc-stats{gap:16px;flex-wrap:wrap}
   .nuc-stat{min-width:80px}
   .nuc-stat-n{font-size:28px}
-  .nuc-hito{padding:12px 0}
-  .nuc-hito-year{font-size:16px;min-width:36px}
-  .nuc-hito-text{font-size:11px}
+  .nuc-hitos-vert .nuc-hito{padding:12px 0;gap:10px}
+  .nuc-hito-year{font-size:15px;min-width:36px}
+  .nuc-hito-text{font-size:11px;overflow:visible;white-space:normal}
 
   /* CERT */
   .cert-layout{gap:24px}
