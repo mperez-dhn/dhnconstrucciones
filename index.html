@@ -450,26 +450,137 @@ footer p{font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.3px}
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
 .d4{transition-delay:.32s}.d5{transition-delay:.4s}
 
+/* ── TABLET (max 1024px) ── */
 @media(max-width:1024px){
-  #empresa > div > div{padding:56px 24px!important}
+  /* NAV */
+  nav{padding:0 20px;height:64px}
+  .nav-links a:not(.nav-cta):not([data-t="nav_cta"]){display:none}
+  .nav-cta{padding:8px 16px;font-size:12px}
+  .lang-toggle{margin-left:6px}
 
-  nav{padding:0 24px}
-  .nav-links a:not(.nav-cta){display:none}
-  .hero{grid-template-columns:1fr}
-  .hero-left{padding:120px 24px 64px}
+  /* HERO */
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-left{padding:100px 24px 56px}
   .hero-right{display:none}
-  .hero-stats{flex-wrap:wrap;gap:24px}
-  .hstat{padding:0;border:none;margin:0;min-width:80px}
-  .sec{padding:64px 24px}
-  .sec-clientes{padding:40px 24px}
-  .srv-grid{grid-template-columns:1fr 1fr}
-  .proy-grid{grid-template-columns:1fr;grid-template-rows:auto}
-  .pc-span{grid-row:span 1}
-  .cert-layout,.why-layout{grid-template-columns:1fr;gap:40px}
+  .hero h1{font-size:clamp(38px,8vw,56px);letter-spacing:-2px}
+  .hero-desc{font-size:14px}
+  .hero-stats{flex-wrap:nowrap;gap:0;padding-top:24px}
+  .hstat{padding:0 16px 0 0;border-right:1px solid rgba(255,255,255,.08);margin-right:16px}
+  .hstat:last-child{border:none;margin:0;padding:0}
+  .hstat-n{font-size:28px}
+  .hstat-l{font-size:9px}
+
+  /* CLIENTES */
+  .sec-clientes{padding:36px 24px}
+  .cli-logos{gap:6px;flex-wrap:wrap}
+  .cli-logo-wrap{min-width:80px;padding:8px 4px}
+  .cli-logo-wrap img{max-height:34px}
+
+  /* SERVICIOS */
+  .sec{padding:56px 24px}
+  .srv-top{flex-direction:column;gap:24px;margin-bottom:32px}
+  .srv-top a.btn-g{align-self:flex-start}
+  .srv-grid{grid-template-columns:1fr 1fr;gap:10px}
+  .scard{padding:24px 20px}
+
+  /* PORTFOLIO */
+  .proy-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:8px}
+  .pc{min-height:180px}
+  .pc h3{font-size:14px}
+  .ptag{font-size:8px}
+  .pc-cta{padding:24px 20px}
+  .pc-cta h3{font-size:17px}
+
+  /* NUCLEAR */
+  .sec-nuclear{padding:56px 24px}
+  .nuc-top{grid-template-columns:1fr;gap:32px}
+  .nuc-stats{gap:28px}
+  .nuc-stat-n{font-size:32px}
+  .nuc-hitos-vert .nuc-hito{padding:14px 0 14px 12px}
+
+  /* CERTIFICACIONES */
+  .cert-layout{grid-template-columns:1fr;gap:32px}
+  .cert-card[style*="grid-column"]{grid-template-columns:1fr!important}
+  .cert-card[style*="grid-column"] img{max-width:200px;margin:0 auto}
+
+  /* EMPRESA + CV */
+  #empresa > div{grid-template-columns:1fr!important}
+  #empresa > div > div{padding:48px 24px!important}
+
+  /* CONTACTO */
   .sec-contact{grid-template-columns:1fr}
   .cl::after{display:none}
-  .cl,.cr{padding:56px 24px}
+  .cl{padding:48px 24px}
+  .cr{padding:48px 24px}
+  .cfr{grid-template-columns:1fr}
+
+  /* FOOTER */
   footer{padding:20px 24px;flex-direction:column;gap:10px;text-align:center}
+  .ft-logo img{margin:0 auto}
+}
+
+/* ── MOBILE (max 600px) ── */
+@media(max-width:600px){
+  /* NAV */
+  nav{padding:0 16px;height:60px}
+  .nav-cta{display:none}
+  .lang-toggle{margin-left:0}
+
+  /* HERO */
+  .hero-left{padding:88px 16px 48px}
+  .hero h1{font-size:clamp(32px,9vw,44px);letter-spacing:-1.5px}
+  .hero-tag{font-size:10px}
+  .hero-desc{font-size:13px;margin-bottom:28px}
+  .btn-g,.btn-w{padding:12px 20px;font-size:12px}
+  .hero-stats{flex-wrap:wrap;gap:20px 0;padding-top:20px}
+  .hstat{min-width:50%;border:none!important;margin:0!important;padding:0 0 12px 0!important}
+  .hstat-n{font-size:30px}
+
+  /* CLIENTES */
+  .sec-clientes{padding:28px 16px}
+  .cli-logos{gap:4px}
+  .cli-logo-wrap{min-width:70px;padding:6px 2px}
+  .cli-logo-wrap img{max-height:28px}
+
+  /* SERVICIOS */
+  .sec{padding:48px 16px}
+  .srv-grid{grid-template-columns:1fr;gap:8px}
+  .scard{padding:20px 18px}
+  .scard-bg{font-size:48px}
+
+  /* PORTFOLIO */
+  .proy-grid{grid-template-columns:1fr;gap:8px}
+  .pc{min-height:200px}
+  .pc-cta{min-height:160px}
+
+  /* NUCLEAR */
+  .sec-nuclear{padding:48px 16px}
+  .nuc-stats{gap:16px;flex-wrap:wrap}
+  .nuc-stat{min-width:80px}
+  .nuc-stat-n{font-size:28px}
+  .nuc-hito{padding:12px 0}
+  .nuc-hito-year{font-size:16px;min-width:36px}
+  .nuc-hito-text{font-size:11px}
+
+  /* CERT */
+  .cert-layout{gap:24px}
+  .cert-card[style*="grid-column"]{padding:20px!important}
+  .cert-card[style*="grid-column"] img{max-width:160px}
+
+  /* EMPRESA */
+  #empresa > div > div{padding:40px 16px!important}
+  .wi{padding:16px 0}
+  .wi h4{font-size:15px}
+
+  /* CONTACTO */
+  .cl,.cr{padding:40px 16px}
+  .cl h2{font-size:32px}
+  .cfr{grid-template-columns:1fr!important}
+  .ci-list{gap:14px}
+
+  /* FOOTER */
+  footer{padding:16px}
+  footer p{font-size:10px}
 }
 
 /* ══ ENERGÍA NUCLEAR ══ */
@@ -531,13 +642,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.3px}
 
 /* Add nuclear to nav */
 
-@media(max-width:1024px){
-  #empresa > div > div{padding:56px 24px!important}
-
-  .nuc-layout{grid-template-columns:1fr;gap:40px}
-  .nuc-hitos{grid-template-columns:1fr 1fr;gap:1px}
-  .sec-nuclear{padding:64px 24px}
-}
+/* nuclear mobile handled above */
 
 /* Vertical nuclear timeline */
 .nuc-hitos-vert{
