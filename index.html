@@ -518,10 +518,11 @@ footer p{font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.3px}
 
   /* PORTFOLIO */
   .proy-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:8px}
-  .pc{min-height:180px}
+  .pc{min-height:200px;position:relative;overflow:hidden}
+  .pc-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
   .pc h3{font-size:14px}
   .ptag{font-size:8px}
-  .pc-cta{padding:24px 20px}
+  .pc-cta{padding:24px 20px;min-height:200px}
   .pc-cta h3{font-size:17px}
 
   /* NUCLEAR */
@@ -588,8 +589,9 @@ footer p{font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.3px}
 
   /* PORTFOLIO */
   .proy-grid{grid-template-columns:1fr;gap:8px}
-  .pc{min-height:200px}
-  .pc-cta{min-height:160px}
+  .pc{min-height:220px;position:relative;overflow:hidden}
+  .pc-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .pc-cta{min-height:180px}
 
   /* NUCLEAR */
   .sec-nuclear{padding:48px 16px!important}
